@@ -1,0 +1,61 @@
+./iperf3_test.sh: line 11: unexpected EOF while looking for matching `}'
+./iperf3_test.sh: line 15: syntax error: unexpected end of file
+./iperf3_test.sh: line 11: unexpected EOF while looking for matching `}'
+./iperf3_test.sh: line 15: syntax error: unexpected end of file
+2026-02-12 16:52:27  Connecting to host 10.10.100.176, port 5201
+2026-02-12 16:52:27  [  5] local 10.10.100.177 port 51884 connected to 10.10.100.176 port 5201
+2026-02-12 16:52:28  [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-02-12 16:52:28  [  5]   0.00-1.00   sec  5.88 GBytes  50.5 Gbits/sec    0   2.26 MBytes       
+2026-02-12 16:52:29  [  5]   1.00-2.00   sec  5.43 GBytes  46.6 Gbits/sec    0   2.38 MBytes       
+2026-02-12 16:52:30  [  5]   2.00-3.00   sec  5.08 GBytes  43.6 Gbits/sec    0   2.51 MBytes       
+2026-02-12 16:52:31  [  5]   3.00-4.00   sec  4.71 GBytes  40.5 Gbits/sec    0   2.66 MBytes       
+2026-02-12 16:52:32  [  5]   4.00-5.00   sec  4.44 GBytes  38.1 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:52:33  [  5]   5.00-6.00   sec  4.66 GBytes  40.0 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:52:34  [  5]   6.00-7.00   sec  5.07 GBytes  43.5 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:52:35  [  5]   7.00-8.00   sec  5.40 GBytes  46.4 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:52:36  [  5]   8.00-9.00   sec  5.64 GBytes  48.4 Gbits/sec    0   2.96 MBytes       
+2026-02-12 16:52:37  [  5]   9.00-10.00  sec  5.73 GBytes  49.2 Gbits/sec    0   2.96 MBytes       
+2026-02-12 16:52:37  - - - - - - - - - - - - - - - - - - - - - - - - -
+2026-02-12 16:52:37  [ ID] Interval           Transfer     Bitrate         Retr
+2026-02-12 16:52:37  [  5]   0.00-10.00  sec  52.0 GBytes  44.7 Gbits/sec    0             sender
+2026-02-12 16:52:37  [  5]   0.00-10.04  sec  52.0 GBytes  44.5 Gbits/sec                  receiver
+2026-02-12 16:52:37  
+2026-02-12 16:52:37  iperf Done.
+2026-02-12 16:53:27  Connecting to host 10.10.100.176, port 5201
+2026-02-12 16:53:27  [  5] local 10.10.100.177 port 39158 connected to 10.10.100.176 port 5201
+2026-02-12 16:53:28  [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-02-12 16:53:28  [  5]   0.00-1.00   sec  5.06 GBytes  43.5 Gbits/sec    0   2.00 MBytes       
+2026-02-12 16:53:29  [  5]   1.00-2.00   sec  5.58 GBytes  48.0 Gbits/sec    0   2.63 MBytes       
+2026-02-12 16:53:30  [  5]   2.00-3.00   sec  5.56 GBytes  47.7 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:53:31  [  5]   3.00-4.00   sec  5.66 GBytes  48.6 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:53:32  [  5]   4.00-5.00   sec  5.63 GBytes  48.4 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:53:33  [  5]   5.00-6.00   sec  5.67 GBytes  48.7 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:53:34  [  5]   6.00-7.00   sec  5.69 GBytes  48.9 Gbits/sec    0   2.79 MBytes       
+2026-02-12 16:53:35  [  5]   7.00-8.00   sec  5.63 GBytes  48.4 Gbits/sec    0   2.98 MBytes       
+2026-02-12 16:53:36  [  5]   8.00-9.00   sec  5.64 GBytes  48.5 Gbits/sec    0   3.15 MBytes       
+2026-02-12 16:53:37  [  5]   9.00-10.00  sec  5.55 GBytes  47.7 Gbits/sec    0   3.15 MBytes       
+2026-02-12 16:53:37  - - - - - - - - - - - - - - - - - - - - - - - - -
+2026-02-12 16:53:37  [ ID] Interval           Transfer     Bitrate         Retr
+2026-02-12 16:53:37  [  5]   0.00-10.00  sec  55.7 GBytes  47.8 Gbits/sec    0             sender
+2026-02-12 16:53:37  [  5]   0.00-10.04  sec  55.7 GBytes  47.6 Gbits/sec                  receiver
+2026-02-12 16:53:37  
+2026-02-12 16:53:37  iperf Done.
+2026-02-12 16:54:27  Connecting to host 10.10.100.176, port 5201
+2026-02-12 16:54:27  [  5] local 10.10.100.177 port 35230 connected to 10.10.100.176 port 5201
+2026-02-12 16:54:28  [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-02-12 16:54:28  [  5]   0.00-1.00   sec  6.50 GBytes  55.8 Gbits/sec    0   2.25 MBytes       
+2026-02-12 16:54:29  [  5]   1.00-2.00   sec  5.81 GBytes  49.9 Gbits/sec    0   2.84 MBytes       
+2026-02-12 16:54:30  [  5]   2.00-3.00   sec  5.57 GBytes  47.8 Gbits/sec    0   3.02 MBytes       
+2026-02-12 16:54:31  [  5]   3.00-4.00   sec  5.44 GBytes  46.7 Gbits/sec    0   3.02 MBytes       
+2026-02-12 16:54:32  [  5]   4.00-5.00   sec  5.31 GBytes  45.6 Gbits/sec    0   3.40 MBytes       
+2026-02-12 16:54:33  [  5]   5.00-6.00   sec  5.31 GBytes  45.6 Gbits/sec    0   3.40 MBytes       
+2026-02-12 16:54:34  [  5]   6.00-7.00   sec  5.64 GBytes  48.5 Gbits/sec    0   3.40 MBytes       
+2026-02-12 16:54:35  [  5]   7.00-8.00   sec  5.67 GBytes  48.7 Gbits/sec    0   3.40 MBytes       
+2026-02-12 16:54:36  [  5]   8.00-9.00   sec  5.62 GBytes  48.2 Gbits/sec    0   3.40 MBytes       
+2026-02-12 16:54:37  [  5]   9.00-10.00  sec  5.50 GBytes  47.3 Gbits/sec    0   3.40 MBytes       
+2026-02-12 16:54:37  - - - - - - - - - - - - - - - - - - - - - - - - -
+2026-02-12 16:54:37  [ ID] Interval           Transfer     Bitrate         Retr
+2026-02-12 16:54:37  [  5]   0.00-10.00  sec  56.4 GBytes  48.4 Gbits/sec    0             sender
+2026-02-12 16:54:37  [  5]   0.00-10.04  sec  56.4 GBytes  48.2 Gbits/sec                  receiver
+2026-02-12 16:54:37  
+2026-02-12 16:54:37  iperf Done.
