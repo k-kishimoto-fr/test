@@ -1,0 +1,19 @@
+2026-02-13 16:42:57  Connecting to host 10.10.100.176, port 5201
+2026-02-13 16:42:57  [  5] local 10.10.100.177 port 44940 connected to 10.10.100.176 port 5201
+2026-02-13 16:42:58  [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-02-13 16:42:58  [  5]   0.00-1.00   sec  1.06 GBytes  9.10 Gbits/sec   95   2.52 MBytes       
+2026-02-13 16:42:59  [  5]   1.00-2.00   sec  1.10 GBytes  9.45 Gbits/sec    0   2.84 MBytes       
+2026-02-13 16:43:00  [  5]   2.00-3.00   sec  1.08 GBytes  9.29 Gbits/sec    3   2.24 MBytes       
+2026-02-13 16:43:01  [  5]   3.00-4.00   sec  1.07 GBytes  9.18 Gbits/sec    0   2.58 MBytes       
+2026-02-13 16:43:02  [  5]   4.00-5.00   sec  1.07 GBytes  9.18 Gbits/sec    0   2.87 MBytes       
+2026-02-13 16:43:03  [  5]   5.00-6.00   sec  1.05 GBytes  9.01 Gbits/sec    1   2.28 MBytes       
+2026-02-13 16:43:04  [  5]   6.00-7.00   sec  1.12 GBytes  9.65 Gbits/sec    0   2.63 MBytes       
+2026-02-13 16:43:05  [  5]   7.00-8.00   sec  1.13 GBytes  9.68 Gbits/sec    0   2.93 MBytes       
+2026-02-13 16:43:06  [  5]   8.00-9.00   sec  1.11 GBytes  9.55 Gbits/sec    9   2.37 MBytes       
+2026-02-13 16:43:07  [  5]   9.00-10.00  sec  1.12 GBytes  9.58 Gbits/sec    0   2.70 MBytes       
+2026-02-13 16:43:07  - - - - - - - - - - - - - - - - - - - - - - - - -
+2026-02-13 16:43:07  [ ID] Interval           Transfer     Bitrate         Retr
+2026-02-13 16:43:07  [  5]   0.00-10.00  sec  10.9 GBytes  9.37 Gbits/sec  108             sender
+2026-02-13 16:43:07  [  5]   0.00-10.04  sec  10.9 GBytes  9.33 Gbits/sec                  receiver
+2026-02-13 16:43:07  
+2026-02-13 16:43:07  iperf Done.
