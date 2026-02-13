@@ -1,0 +1,12 @@
+2026/02/13 21:12:30 [INFO    ] Start HTTP GET sampling script.
+2026/02/13 21:12:30 [INFO    ] Parameters: KBYTE=90000, INTERVAL=30, SAMPLE=20, CLIENT=1, SAMPLE_PER_CLIENT=20, START_INTERVAL=30
+2026/02/13 21:12:30 [INFO    ] GET URL: https://speed.cloudflare.com/__down?bytes=90000000
+2026/02/13 21:12:30 [INFO    ] Client 000 started. Sampling 20 times.
+2026/02/13 21:12:30 [INFO    ] client 000 on sample 1 Successfully got HTTP response.
+2026/02/13 21:13:00 [INFO    ] client 000 on sample 2 Successfully got HTTP response.
+2026/02/13 21:13:31 [INFO    ] client 000 on sample 3 Successfully got HTTP response.
+2026/02/13 21:14:02 [INFO    ] client 000 on sample 4 Successfully got HTTP response.
+2026/02/13 21:14:32 [INFO    ] client 000 on sample 5 Successfully got HTTP response.
+2026/02/13 21:15:02 [INFO    ] client 000 on sample 6 Successfully got HTTP response.
+2026/02/13 21:15:11 [INFO    ] Interrupt received, terminating child processes...
+2026/02/13 21:15:12 [INFO    ] Cleanup complete. Exiting.
