@@ -53,7 +53,7 @@
 # 定数
 #-------------------------------------------------------------------#
 #typeset -r TPL_URL="https://httpbin.org/bytes/%http_byte%"   # HTTPテストサイトのURL
-typeset -r TPL_URL="https://speed.cloudflare.com/__down?bytes=http_byte%"   # HTTPテストサイトのURL
+typeset -r TPL_URL="https://speed.cloudflare.com/__down?bytes=%http_byte%"   # HTTPテストサイトのURL
 #typeset -r TPL_URL="https://mockerapi.com/bytes/%http_byte%" # HTTPテストサイトのURL (httpbin.orgより高負荷テストに向いている)
 #typeset -r TPL_URL="https://httpi.dev/bytes/%http_byte%"      # HTTPテストサイトのURL (httpbin.orgより高負荷/大容量にむいてる)
 
