@@ -53,6 +53,7 @@
 # 定数
 #-------------------------------------------------------------------#
 #typeset -r TPL_URL="https://httpbin.org/bytes/%http_byte%"   # HTTPテストサイトのURL
+#typeset -r TPL_URL="https://fsn1-speed.hetzner.com/100MB.bin"   # HTTPテストサイトのURL
 typeset -r TPL_URL="https://speed.cloudflare.com/__down?bytes=%http_byte%"   # HTTPテストサイトのURL
 #typeset -r TPL_URL="https://mockerapi.com/bytes/%http_byte%" # HTTPテストサイトのURL (httpbin.orgより高負荷テストに向いている)
 #typeset -r TPL_URL="https://httpi.dev/bytes/%http_byte%"      # HTTPテストサイトのURL (httpbin.orgより高負荷/大容量にむいてる)
@@ -132,7 +133,7 @@ function get_http {
   # HTTP GET実行
   while [ $(( SAMPLE_PER_CLIENT )) -gt ${completed} ]
   do
-  curl -o /dev/null -sS -w "$( date +'%Y-%m-%d %H:%M:%S'),${client_id},%{http_code},%{time_total},%{time_starttransfer},%{time_appconnect},%{time_connect},%{time_namelookup},%{remote_ip}\n" ${GET_URL} >> ${CSVFILE}
+  curl -o /dev/null -sS -w "$( date +'%Y-%m-%d %H:%M:%S'),${client_id},%{http_code},%{time_total},%{time_starttransfer},%{time_appconnect},%{time_connect},%{time_namelookup},%{size_download},%{remote_ip}\n" ${GET_URL} >> ${CSVFILE}
   if [[ $? -ne 0 ]]; then
     e_log "client ${client_id} on sample $(( completed + 1 )) Failed to get HTTP response."
   else    
