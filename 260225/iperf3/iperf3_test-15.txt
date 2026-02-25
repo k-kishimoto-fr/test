@@ -1,19 +1,19 @@
-2026-02-25 13:34:04Connecting to host 10.10.100.176, port 5201
-2026-02-25 13:34:04[  5] local 192.168.125.5 port 57788 connected to 10.10.100.176 port 5201
-2026-02-25 13:34:05[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-2026-02-25 13:34:05[  5]   0.00-1.00   sec   841 MBytes  7.05 Gbits/sec   81   1.15 MBytes       
-2026-02-25 13:34:06[  5]   1.00-2.00   sec   816 MBytes  6.85 Gbits/sec   11   1.13 MBytes       
-2026-02-25 13:34:07[  5]   2.00-3.00   sec   818 MBytes  6.86 Gbits/sec    3   1.10 MBytes       
-2026-02-25 13:34:08[  5]   3.00-4.00   sec   819 MBytes  6.87 Gbits/sec    5   1.09 MBytes       
-2026-02-25 13:34:09[  5]   4.00-5.00   sec   824 MBytes  6.91 Gbits/sec   13   1.08 MBytes       
-2026-02-25 13:34:10[  5]   5.00-6.00   sec   825 MBytes  6.92 Gbits/sec    0   1.55 MBytes       
-2026-02-25 13:34:11[  5]   6.00-7.00   sec   830 MBytes  6.96 Gbits/sec    7   1.54 MBytes       
-2026-02-25 13:34:12[  5]   7.00-8.00   sec   819 MBytes  6.87 Gbits/sec    7   1.52 MBytes       
-2026-02-25 13:34:13[  5]   8.00-9.00   sec   819 MBytes  6.87 Gbits/sec    3   1.51 MBytes       
-2026-02-25 13:34:14[  5]   9.00-10.00  sec   820 MBytes  6.88 Gbits/sec   11   1.49 MBytes       
-2026-02-25 13:34:14- - - - - - - - - - - - - - - - - - - - - - - - -
-2026-02-25 13:34:14[ ID] Interval           Transfer     Bitrate         Retr
-2026-02-25 13:34:14[  5]   0.00-10.00  sec  8.04 GBytes  6.90 Gbits/sec  141             sender
-2026-02-25 13:34:14[  5]   0.00-10.04  sec  8.04 GBytes  6.87 Gbits/sec                  receiver
-2026-02-25 13:34:14
-2026-02-25 13:34:14iperf Done.
+2026-02-25 14:22:32Connecting to host 10.10.100.176, port 5201
+2026-02-25 14:22:32[  5] local 10.10.100.179 port 42560 connected to 10.10.100.176 port 5201
+2026-02-25 14:22:33[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-02-25 14:22:33[  5]   0.00-1.00   sec   822 MBytes  6.89 Gbits/sec   83   1.09 MBytes       
+2026-02-25 14:22:34[  5]   1.00-2.00   sec   830 MBytes  6.96 Gbits/sec    3   1.09 MBytes       
+2026-02-25 14:22:35[  5]   2.00-3.00   sec   826 MBytes  6.93 Gbits/sec    4   1.09 MBytes       
+2026-02-25 14:22:36[  5]   3.00-4.00   sec   824 MBytes  6.91 Gbits/sec    0   1.55 MBytes       
+2026-02-25 14:22:37[  5]   4.00-5.00   sec   822 MBytes  6.90 Gbits/sec    1   1.53 MBytes       
+2026-02-25 14:22:38[  5]   5.00-6.00   sec   824 MBytes  6.91 Gbits/sec    1   1.53 MBytes       
+2026-02-25 14:22:39[  5]   6.00-7.00   sec   810 MBytes  6.80 Gbits/sec    6   1.51 MBytes       
+2026-02-25 14:22:40[  5]   7.00-8.00   sec   816 MBytes  6.85 Gbits/sec   21   1.50 MBytes       
+2026-02-25 14:22:41[  5]   8.00-9.00   sec   826 MBytes  6.93 Gbits/sec    4   1.50 MBytes       
+2026-02-25 14:22:42[  5]   9.00-10.00  sec   824 MBytes  6.91 Gbits/sec    2   1.49 MBytes       
+2026-02-25 14:22:42- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-02-25 14:22:42[ ID] Interval           Transfer     Bitrate         Retr
+2026-02-25 14:22:42[  5]   0.00-10.00  sec  8.03 GBytes  6.90 Gbits/sec  125             sender
+2026-02-25 14:22:42[  5]   0.00-10.04  sec  8.03 GBytes  6.87 Gbits/sec                  receiver
+2026-02-25 14:22:42
+2026-02-25 14:22:42iperf Done.
