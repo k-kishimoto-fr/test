@@ -1,0 +1,274 @@
+# nsx/iperf3 quick checks
+===== 2026-02-25 15:07:09 | uname -a
+Linux nsx4-test02 5.14.0-427.18.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Tue May 28 06:27:02 EDT 2024 x86_64 x86_64 x86_64 GNU/Linux
+[OK]
+
+===== 2026-02-25 15:07:09 | cat /etc/os-release
+NAME="AlmaLinux"
+VERSION="9.4 (Seafoam Ocelot)"
+ID="almalinux"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.4"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="AlmaLinux 9.4 (Seafoam Ocelot)"
+ANSI_COLOR="0;34"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:almalinux:almalinux:9::baseos"
+HOME_URL="https://almalinux.org/"
+DOCUMENTATION_URL="https://wiki.almalinux.org/"
+BUG_REPORT_URL="https://bugs.almalinux.org/"
+
+ALMALINUX_MANTISBT_PROJECT="AlmaLinux-9"
+ALMALINUX_MANTISBT_PROJECT_VERSION="9.4"
+REDHAT_SUPPORT_PRODUCT="AlmaLinux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.4"
+SUPPORT_END=2032-06-01
+[OK]
+
+===== 2026-02-25 15:07:09 | date
+Wed Feb 25 03:07:09 PM JST 2026
+[OK]
+
+===== 2026-02-25 15:07:09 | ip addr show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    altname enp19s0
+    inet 10.10.100.179/24 brd 10.10.100.255 scope global dynamic noprefixroute ens224
+       valid_lft 83173sec preferred_lft 83173sec
+    inet6 fe80::c2cf:e818:cfa0:d34a/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+[OK]
+
+===== 2026-02-25 15:07:09 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8351397491 5469587      0       0       0      66 
+    TX:    bytes packets errors dropped carrier collsns           
+    259823726655 4150113      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:07:09 | ethtool -i ens224
+driver: vmxnet3
+version: 1.7.0.0-k-NAPI
+firmware-version: 
+expansion-rom-version: 
+bus-info: 0000:13:00.0
+supports-statistics: yes
+supports-test: no
+supports-eeprom-access: no
+supports-register-dump: yes
+supports-priv-flags: no
+[OK]
+
+===== 2026-02-25 15:07:09 | ethtool -k ens224
+Features for ens224:
+rx-checksumming: on
+tx-checksumming: on
+	tx-checksum-ipv4: off [fixed]
+	tx-checksum-ip-generic: on
+	tx-checksum-ipv6: off [fixed]
+	tx-checksum-fcoe-crc: off [fixed]
+	tx-checksum-sctp: off [fixed]
+scatter-gather: on
+	tx-scatter-gather: on
+	tx-scatter-gather-fraglist: off [fixed]
+tcp-segmentation-offload: on
+	tx-tcp-segmentation: on
+	tx-tcp-ecn-segmentation: off [fixed]
+	tx-tcp-mangleid-segmentation: off
+	tx-tcp6-segmentation: on
+generic-segmentation-offload: on
+generic-receive-offload: on
+large-receive-offload: on
+rx-vlan-offload: on
+tx-vlan-offload: on
+ntuple-filters: off [fixed]
+receive-hashing: on
+highdma: on
+rx-vlan-filter: on [fixed]
+vlan-challenged: off [fixed]
+tx-lockless: off [fixed]
+netns-local: off [fixed]
+tx-gso-robust: off [fixed]
+tx-fcoe-segmentation: off [fixed]
+tx-gre-segmentation: off [fixed]
+tx-gre-csum-segmentation: off [fixed]
+tx-ipxip4-segmentation: off [fixed]
+tx-ipxip6-segmentation: off [fixed]
+tx-udp_tnl-segmentation: on
+tx-udp_tnl-csum-segmentation: on
+tx-gso-partial: off [fixed]
+tx-tunnel-remcsum-segmentation: off [fixed]
+tx-sctp-segmentation: off [fixed]
+tx-esp-segmentation: off [fixed]
+tx-udp-segmentation: off [fixed]
+tx-gso-list: off [fixed]
+fcoe-mtu: off [fixed]
+tx-nocache-copy: off
+loopback: off [fixed]
+rx-fcs: off [fixed]
+rx-all: off [fixed]
+tx-vlan-stag-hw-insert: off [fixed]
+rx-vlan-stag-hw-parse: off [fixed]
+rx-vlan-stag-filter: off [fixed]
+l2-fwd-offload: off [fixed]
+hw-tc-offload: off [fixed]
+esp-hw-offload: off [fixed]
+esp-tx-csum-hw-offload: off [fixed]
+rx-udp_tunnel-port-offload: off [fixed]
+tls-hw-tx-offload: off [fixed]
+tls-hw-rx-offload: off [fixed]
+rx-gro-hw: off [fixed]
+tls-hw-record: off [fixed]
+rx-gro-list: off
+macsec-hw-offload: off [fixed]
+rx-udp-gro-forwarding: off
+hsr-tag-ins-offload: off [fixed]
+hsr-tag-rm-offload: off [fixed]
+hsr-fwd-offload: off [fixed]
+hsr-dup-offload: off [fixed]
+[OK]
+
+===== 2026-02-25 15:07:09 | ss -lntp | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:07:09 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:07:09 | sysctl net.ipv4.tcp_rmem
+net.ipv4.tcp_rmem = 4096	131072	6291456
+[OK]
+
+===== 2026-02-25 15:07:09 | sysctl net.ipv4.tcp_wmem
+net.ipv4.tcp_wmem = 4096	16384	4194304
+[OK]
+
+===== 2026-02-25 15:07:09 | sysctl net.ipv4.tcp_congestion_control
+net.ipv4.tcp_congestion_control = cubic
+[OK]
+
+===== 2026-02-25 15:07:09 | sysctl net.core.rmem_max
+net.core.rmem_max = 212992
+[OK]
+
+===== 2026-02-25 15:07:09 | sysctl net.core.wmem_max
+net.core.wmem_max = 212992
+[OK]
+
+===== 2026-02-25 15:07:09 | nstat | head -n 50
+#kernel
+IpInReceives                    10940415           0.0
+IpInAddrErrors                  2                  0.0
+IpInDelivers                    10936987           0.0
+IpOutRequests                   8338112            0.0
+IpOutNoRoutes                   4                  0.0
+IpOutTransmits                  8338112            0.0
+IcmpInMsgs                      7142               0.0
+IcmpInErrors                    1                  0.0
+IcmpInDestUnreachs              9                  0.0
+IcmpInEchos                     7126               0.0
+IcmpInEchoReps                  7                  0.0
+IcmpOutMsgs                     7142               0.0
+IcmpOutDestUnreachs             2                  0.0
+IcmpOutEchos                    14                 0.0
+IcmpOutEchoReps                 7126               0.0
+IcmpMsgInType0                  7                  0.0
+IcmpMsgInType3                  9                  0.0
+IcmpMsgInType8                  7126               0.0
+IcmpMsgOutType0                 7126               0.0
+IcmpMsgOutType3                 2                  0.0
+IcmpMsgOutType8                 14                 0.0
+TcpActiveOpens                  568                0.0
+TcpAttemptFails                 7                  0.0
+TcpEstabResets                  64                 0.0
+TcpInSegs                       10927152           0.0
+TcpOutSegs                      365482458          0.0
+TcpRetransSegs                  8470               0.0
+TcpOutRsts                      47                 0.0
+UdpInDatagrams                  2693               0.0
+UdpOutDatagrams                 2705               0.0
+Ip6InReceives                   3501               0.0
+Ip6InDelivers                   3501               0.0
+Ip6OutRequests                  3672               0.0
+Ip6OutDiscards                  3                  0.0
+Ip6InMcastPkts                  3438               0.0
+Ip6OutMcastPkts                 3400               0.0
+Ip6InOctets                     266021             0.0
+Ip6OutOctets                    346369             0.0
+Ip6InMcastOctets                261508             0.0
+Ip6OutMcastOctets               325120             0.0
+Ip6InNoECTPkts                  3491               0.0
+Ip6InECT1Pkts                   9                  0.0
+Ip6InECT0Pkts                   1                  0.0
+Ip6OutTransmits                 3672               0.0
+Icmp6InMsgs                     3500               0.0
+Icmp6OutMsgs                    3457               0.0
+Icmp6InGroupMembQueries         3389               0.0
+Icmp6InRouterAdvertisements     13                 0.0
+Icmp6InNeighborAdvertisements   98                 0.0
+[OK]
+
+===== 2026-02-25 15:07:09 | firewall-cmd --state
+running
+[OK]
+
+===== 2026-02-25 15:07:09 | firewall-cmd --list-ports
+5201/tcp
+[OK]
+
+===== 2026-02-25 15:07:10 | dmesg | tail -n 50
+[417201.034947] pci 0000:13:00.0: BAR 0: assigned [mem 0xfda12000-0xfda12fff]
+[417201.034966] pci 0000:13:00.0: BAR 1: assigned [mem 0xfda13000-0xfda13fff]
+[417201.034986] pci 0000:13:00.0: BAR 3: no space for [io  size 0x0010]
+[417201.034987] pci 0000:13:00.0: BAR 3: failed to assign [io  size 0x0010]
+[417201.034990] pcieport 0000:00:17.0: PCI bridge to [bus 13]
+[417201.035020] pcieport 0000:00:17.0:   bridge window [mem 0xfda00000-0xfdafffff]
+[417201.035039] pcieport 0000:00:17.0:   bridge window [mem 0xf9400000-0xf94fffff 64bit pref]
+[417201.035076] PCI: No. 2 try to assign unassigned res
+[417201.035079] pci 0000:00:11.0: resource 13 [io  0x1000-0x1fff] released
+[417201.035080] pci 0000:00:11.0: PCI bridge to [bus 02]
+[417201.035119] release child resource [io  0x4000-0x4007]
+[417201.035120] release child resource [io  0x4000-0x4007]
+[417201.035121] pcieport 0000:00:15.0: resource 13 [io  0x4000-0x4fff] released
+[417201.035122] pcieport 0000:00:15.0: PCI bridge to [bus 03]
+[417201.035162] release child resource [io  0x3000-0x300f]
+[417201.035163] pcieport 0000:00:16.0: resource 13 [io  0x3000-0x3fff] released
+[417201.035164] pcieport 0000:00:16.0: PCI bridge to [bus 0b]
+[417201.035220] pcieport 0000:00:17.6: resource 13 [io  0xf000-0xffff] released
+[417201.035221] pcieport 0000:00:17.6: PCI bridge to [bus 19]
+[417201.035260] pcieport 0000:00:17.7: resource 13 [io  0xe000-0xefff] released
+[417201.035261] pcieport 0000:00:17.7: PCI bridge to [bus 1a]
+[417201.035298] pcieport 0000:00:18.0: resource 13 [io  0xd000-0xdfff] released
+[417201.035299] pcieport 0000:00:18.0: PCI bridge to [bus 1b]
+[417201.035337] pcieport 0000:00:18.1: resource 13 [io  0xc000-0xcfff] released
+[417201.035338] pcieport 0000:00:18.1: PCI bridge to [bus 1c]
+[417201.035376] pcieport 0000:00:18.2: resource 13 [io  0xb000-0xbfff] released
+[417201.035377] pcieport 0000:00:18.2: PCI bridge to [bus 1d]
+[417201.035427] pcieport 0000:00:18.3: resource 13 [io  0xa000-0xafff] released
+[417201.035428] pcieport 0000:00:18.3: PCI bridge to [bus 1e]
+[417201.035473] pcieport 0000:00:18.4: resource 13 [io  0x9000-0x9fff] released
+[417201.035474] pcieport 0000:00:18.4: PCI bridge to [bus 1f]
+[417201.035519] pcieport 0000:00:18.5: resource 13 [io  0x8000-0x8fff] released
+[417201.035520] pcieport 0000:00:18.5: PCI bridge to [bus 20]
+[417201.035558] pcieport 0000:00:18.6: resource 13 [io  0x7000-0x7fff] released
+[417201.035559] pcieport 0000:00:18.6: PCI bridge to [bus 21]
+[417201.035597] pcieport 0000:00:18.7: resource 13 [io  0x6000-0x6fff] released
+[417201.035598] pcieport 0000:00:18.7: PCI bridge to [bus 22]
+[417201.035644] pcieport 0000:00:17.0: BAR 13: assigned [io  0x1000-0x1fff]
+[417201.035646] pci 0000:13:00.0: BAR 3: assigned [io  0x1000-0x100f]
+[417201.035674] pcieport 0000:00:17.0: PCI bridge to [bus 13]
+[417201.035684] pcieport 0000:00:17.0:   bridge window [io  0x1000-0x1fff]
+[417201.035712] pcieport 0000:00:17.0:   bridge window [mem 0xfda00000-0xfdafffff]
+[417201.035731] pcieport 0000:00:17.0:   bridge window [mem 0xf9400000-0xf94fffff 64bit pref]
+[417201.035985] vmxnet3 0000:13:00.0: enabling device (0000 -> 0003)
+[417201.036961] vmxnet3 0000:13:00.0: # of Tx queues : 2, # of Rx queues : 2
+[417201.038653] vmxnet3 0000:13:00.0 eth0: NIC Link is Up 10000 Mbps
+[417201.056270] vmxnet3 0000:13:00.0 ens224: renamed from eth0
+[417201.075286] vmxnet3 0000:13:00.0 ens224: intr type 3, mode 0, 3 vectors allocated
+[417201.077563] vmxnet3 0000:13:00.0 ens224: NIC Link is Up 10000 Mbps
+[417201.464953] IPv6: ADDRCONF(NETDEV_CHANGE): ens224: link becomes ready
+[OK]
+
+
