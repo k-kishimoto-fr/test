@@ -1,0 +1,579 @@
+# iperf3 during checks (client)
+===== 2026-02-25 15:19:45 | uname -a
+Linux nsx4-test02 5.14.0-427.18.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Tue May 28 06:27:02 EDT 2024 x86_64 x86_64 x86_64 GNU/Linux
+[OK]
+
+===== 2026-02-25 15:19:45 | cat /etc/os-release
+NAME="AlmaLinux"
+VERSION="9.4 (Seafoam Ocelot)"
+ID="almalinux"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.4"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="AlmaLinux 9.4 (Seafoam Ocelot)"
+ANSI_COLOR="0;34"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:almalinux:almalinux:9::baseos"
+HOME_URL="https://almalinux.org/"
+DOCUMENTATION_URL="https://wiki.almalinux.org/"
+BUG_REPORT_URL="https://bugs.almalinux.org/"
+
+ALMALINUX_MANTISBT_PROJECT="AlmaLinux-9"
+ALMALINUX_MANTISBT_PROJECT_VERSION="9.4"
+REDHAT_SUPPORT_PRODUCT="AlmaLinux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.4"
+SUPPORT_END=2032-06-01
+[OK]
+
+===== 2026-02-25 15:19:45 | date
+Wed Feb 25 03:19:45 PM JST 2026
+[OK]
+
+===== 2026-02-25 15:19:45 | ip addr show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    altname enp19s0
+    inet 10.10.100.179/24 brd 10.10.100.255 scope global dynamic noprefixroute ens224
+       valid_lft 82417sec preferred_lft 82417sec
+    inet6 fe80::c2cf:e818:cfa0:d34a/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+[OK]
+
+===== 2026-02-25 15:19:45 | ethtool -i ens224
+driver: vmxnet3
+version: 1.7.0.0-k-NAPI
+firmware-version: 
+expansion-rom-version: 
+bus-info: 0000:13:00.0
+supports-statistics: yes
+supports-test: no
+supports-eeprom-access: no
+supports-register-dump: yes
+supports-priv-flags: no
+[OK]
+
+===== 2026-02-25 15:19:45 | ethtool -k ens224
+Features for ens224:
+rx-checksumming: on
+tx-checksumming: on
+	tx-checksum-ipv4: off [fixed]
+	tx-checksum-ip-generic: on
+	tx-checksum-ipv6: off [fixed]
+	tx-checksum-fcoe-crc: off [fixed]
+	tx-checksum-sctp: off [fixed]
+scatter-gather: on
+	tx-scatter-gather: on
+	tx-scatter-gather-fraglist: off [fixed]
+tcp-segmentation-offload: on
+	tx-tcp-segmentation: on
+	tx-tcp-ecn-segmentation: off [fixed]
+	tx-tcp-mangleid-segmentation: off
+	tx-tcp6-segmentation: on
+generic-segmentation-offload: on
+generic-receive-offload: on
+large-receive-offload: on
+rx-vlan-offload: on
+tx-vlan-offload: on
+ntuple-filters: off [fixed]
+receive-hashing: on
+highdma: on
+rx-vlan-filter: on [fixed]
+vlan-challenged: off [fixed]
+tx-lockless: off [fixed]
+netns-local: off [fixed]
+tx-gso-robust: off [fixed]
+tx-fcoe-segmentation: off [fixed]
+tx-gre-segmentation: off [fixed]
+tx-gre-csum-segmentation: off [fixed]
+tx-ipxip4-segmentation: off [fixed]
+tx-ipxip6-segmentation: off [fixed]
+tx-udp_tnl-segmentation: on
+tx-udp_tnl-csum-segmentation: on
+tx-gso-partial: off [fixed]
+tx-tunnel-remcsum-segmentation: off [fixed]
+tx-sctp-segmentation: off [fixed]
+tx-esp-segmentation: off [fixed]
+tx-udp-segmentation: off [fixed]
+tx-gso-list: off [fixed]
+fcoe-mtu: off [fixed]
+tx-nocache-copy: off
+loopback: off [fixed]
+rx-fcs: off [fixed]
+rx-all: off [fixed]
+tx-vlan-stag-hw-insert: off [fixed]
+rx-vlan-stag-hw-parse: off [fixed]
+rx-vlan-stag-filter: off [fixed]
+l2-fwd-offload: off [fixed]
+hw-tc-offload: off [fixed]
+esp-hw-offload: off [fixed]
+esp-tx-csum-hw-offload: off [fixed]
+rx-udp_tunnel-port-offload: off [fixed]
+tls-hw-tx-offload: off [fixed]
+tls-hw-rx-offload: off [fixed]
+rx-gro-hw: off [fixed]
+tls-hw-record: off [fixed]
+rx-gro-list: off
+macsec-hw-offload: off [fixed]
+rx-udp-gro-forwarding: off
+hsr-tag-ins-offload: off [fixed]
+hsr-tag-rm-offload: off [fixed]
+hsr-fwd-offload: off [fixed]
+hsr-dup-offload: off [fixed]
+[OK]
+
+===== 2026-02-25 15:19:45 | sysctl net.core.rmem_max
+net.core.rmem_max = 212992
+[OK]
+
+===== 2026-02-25 15:19:45 | sysctl net.core.wmem_max
+net.core.wmem_max = 212992
+[OK]
+
+===== 2026-02-25 15:19:45 | sysctl net.ipv4.tcp_rmem
+net.ipv4.tcp_rmem = 4096	131072	6291456
+[OK]
+
+===== 2026-02-25 15:19:45 | sysctl net.ipv4.tcp_wmem
+net.ipv4.tcp_wmem = 4096	16384	4194304
+[OK]
+
+===== 2026-02-25 15:19:45 | sysctl net.ipv4.tcp_congestion_control
+net.ipv4.tcp_congestion_control = cubic
+[OK]
+
+===== SAMPLE 1/15 2026-02-25 15:19:45
+===== 2026-02-25 15:19:45 | ss -tin | grep 5201
+ESTAB 0      0       10.10.100.179:60534 10.10.100.176:5201
+ESTAB 0      2803576 10.10.100.179:60550 10.10.100.176:5201
+[OK]
+
+===== 2026-02-25 15:19:45 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8356514787 5546913      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    263331292421 4204182      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:45 | nstat | head -n 30
+#kernel
+IpInReceives                    77369              0.0
+IpInDelivers                    77363              0.0
+IpOutRequests                   54098              0.0
+IpOutTransmits                  54098              0.0
+TcpActiveOpens                  4                  0.0
+TcpInSegs                       77347              0.0
+TcpOutSegs                      2421889            0.0
+TcpRetransSegs                  39                 0.0
+TcpOutRsts                      6                  0.0
+UdpInDatagrams                  16                 0.0
+UdpOutDatagrams                 16                 0.0
+Ip6InReceives                   6                  0.0
+Ip6InDelivers                   6                  0.0
+Ip6OutRequests                  6                  0.0
+Ip6InMcastPkts                  6                  0.0
+Ip6OutMcastPkts                 6                  0.0
+Ip6InOctets                     456                0.0
+Ip6OutOctets                    456                0.0
+Ip6InMcastOctets                456                0.0
+Ip6OutMcastOctets               456                0.0
+Ip6InNoECTPkts                  6                  0.0
+Ip6OutTransmits                 6                  0.0
+Icmp6InMsgs                     6                  0.0
+Icmp6OutMsgs                    6                  0.0
+Icmp6InGroupMembQueries         6                  0.0
+Icmp6OutMLDv2Reports            6                  0.0
+Icmp6InType130                  6                  0.0
+Icmp6OutType143                 6                  0.0
+TcpExtDelayedACKs               4                  0.0
+[OK]
+
+===== SAMPLE 2/15 2026-02-25 15:19:46
+===== 2026-02-25 15:19:46 | ss -tin | grep 5201
+ESTAB 0      0       10.10.100.179:60534 10.10.100.176:5201
+ESTAB 0      2846144 10.10.100.179:60550 10.10.100.176:5201
+[OK]
+
+===== 2026-02-25 15:19:46 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8357703635 5564922      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    264201973413 4217566      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:46 | nstat | head -n 30
+#kernel
+IpInReceives                    18014              0.0
+IpInDelivers                    18014              0.0
+IpOutRequests                   13390              0.0
+IpOutTransmits                  13390              0.0
+TcpInSegs                       18016              0.0
+TcpOutSegs                      601065             0.0
+TcpRetransSegs                  29                 0.0
+TcpExtTCPPureAcks               14363              0.0
+TcpExtTCPHPAcks                 3516               0.0
+TcpExtTCPSackRecovery           1                  0.0
+TcpExtTCPFastRetrans            29                 0.0
+TcpExtTCPBacklogCoalesce        139                0.0
+TcpExtTCPSackShifted            13                 0.0
+TcpExtTCPSackMerged             40                 0.0
+TcpExtTCPSackShiftFallback      8                  0.0
+TcpExtTCPAutoCorking            702                0.0
+TcpExtTCPOrigDataSent           601110             0.0
+TcpExtTCPDelivered              601128             0.0
+IpExtInOctets                   937404             0.0
+IpExtOutOctets                  871341344          0.0
+IpExtInNoECTPkts                18022              0.0
+[OK]
+
+===== SAMPLE 3/15 2026-02-25 15:19:47
+===== 2026-02-25 15:19:47 | ss -tin | grep 5201
+ESTAB 0      0       10.10.100.179:60534 10.10.100.176:5201
+ESTAB 0      3469640 10.10.100.179:60550 10.10.100.176:5201
+[OK]
+
+===== 2026-02-25 15:19:47 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8358890273 5582899      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    265073733189 4230950      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:47 | nstat | head -n 30
+#kernel
+IpInReceives                    17973              0.0
+IpInDelivers                    17973              0.0
+IpOutRequests                   13378              0.0
+IpOutTransmits                  13378              0.0
+TcpInSegs                       17971              0.0
+TcpOutSegs                      601065             0.0
+TcpRetransSegs                  9                  0.0
+TcpExtTCPPureAcks               14229              0.0
+TcpExtTCPHPAcks                 3484               0.0
+TcpExtTCPSackRecovery           1                  0.0
+TcpExtTCPFastRetrans            9                  0.0
+TcpExtTCPBacklogCoalesce        255                0.0
+TcpExtTCPSackShifted            10                 0.0
+TcpExtTCPSackMerged             22                 0.0
+TcpExtTCPSackShiftFallback      5                  0.0
+TcpExtTCPAutoCorking            722                0.0
+TcpExtTCPOrigDataSent           601020             0.0
+TcpExtTCPDelivered              601011             0.0
+IpExtInOctets                   934596             0.0
+IpExtOutOctets                  871050704          0.0
+IpExtInNoECTPkts                17970              0.0
+[OK]
+
+===== SAMPLE 4/15 2026-02-25 15:19:48
+===== 2026-02-25 15:19:48 | ss -tin | grep 5201
+ESTAB 0      0       10.10.100.179:60534 10.10.100.176:5201
+ESTAB 0      3373760 10.10.100.179:60550 10.10.100.176:5201
+[OK]
+
+===== 2026-02-25 15:19:48 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8360076131 5600864      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    265947838403 4244373      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:48 | nstat | head -n 30
+#kernel
+IpInReceives                    17959              0.0
+IpInDelivers                    17958              0.0
+IpOutRequests                   13418              0.0
+IpOutTransmits                  13418              0.0
+TcpInSegs                       17963              0.0
+TcpOutSegs                      602955             0.0
+TcpRetransSegs                  7                  0.0
+TcpExtTCPPureAcks               14406              0.0
+TcpExtTCPHPAcks                 3464               0.0
+TcpExtTCPSackRecovery           1                  0.0
+TcpExtTCPFastRetrans            7                  0.0
+TcpExtTCPBacklogCoalesce        98                 0.0
+TcpExtTCPSackShifted            11                 0.0
+TcpExtTCPSackMerged             22                 0.0
+TcpExtTCPSackShiftFallback      5                  0.0
+TcpExtTCPAutoCorking            690                0.0
+TcpExtTCPOrigDataSent           603090             0.0
+TcpExtTCPDelivered              603076             0.0
+IpExtInOctets                   934192             0.0
+IpExtOutOctets                  873721656          0.0
+IpExtInNoECTPkts                17962              0.0
+[OK]
+
+===== SAMPLE 5/15 2026-02-25 15:19:49
+===== 2026-02-25 15:19:49 | ss -tin | grep 5201
+ESTAB 0      0       10.10.100.179:60534 10.10.100.176:5201
+ESTAB 0      2920448 10.10.100.179:60550 10.10.100.176:5201
+[OK]
+
+===== 2026-02-25 15:19:49 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8361266465 5618897      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    266823536751 4257823      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:49 | nstat | head -n 30
+#kernel
+IpInReceives                    18035              0.0
+IpInDelivers                    18036              0.0
+IpOutRequests                   13450              0.0
+IpOutTransmits                  13450              0.0
+TcpInSegs                       18031              0.0
+TcpOutSegs                      603990             0.0
+TcpRetransSegs                  26                 0.0
+TcpExtTCPPureAcks               14397              0.0
+TcpExtTCPHPAcks                 3508               0.0
+TcpExtTCPSackRecovery           1                  0.0
+TcpExtTCPFastRetrans            26                 0.0
+TcpExtTCPBacklogCoalesce        125                0.0
+TcpExtTCPSackShifted            9                  0.0
+TcpExtTCPSackMerged             22                 0.0
+TcpExtTCPSackShiftFallback      3                  0.0
+TcpExtTCPAutoCorking            707                0.0
+TcpExtTCPOrigDataSent           603990             0.0
+TcpExtTCPDelivered              604001             0.0
+IpExtInOctets                   937716             0.0
+IpExtOutOctets                  875314412          0.0
+IpExtInNoECTPkts                18030              0.0
+[OK]
+
+===== SAMPLE 6/15 2026-02-25 15:19:50
+===== 2026-02-25 15:19:50 | ss -tin | grep 5201
+ESTAB 0      0       10.10.100.179:60534 10.10.100.176:5201
+ESTAB 0      3258000 10.10.100.179:60550 10.10.100.176:5201
+[OK]
+
+===== 2026-02-25 15:19:50 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8362446911 5636780      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    267697377991 4271239      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:50 | nstat | head -n 30
+#kernel
+IpInReceives                    17881              0.0
+IpInDelivers                    17881              0.0
+IpOutRequests                   13420              0.0
+IpOutTransmits                  13420              0.0
+TcpInSegs                       17880              0.0
+TcpOutSegs                      603045             0.0
+TcpRetransSegs                  5                  0.0
+UdpInDatagrams                  1                  0.0
+UdpOutDatagrams                 1                  0.0
+TcpExtTCPPureAcks               14388              0.0
+TcpExtTCPHPAcks                 3411               0.0
+TcpExtTCPSackRecovery           1                  0.0
+TcpExtTCPFastRetrans            5                  0.0
+TcpExtTCPBacklogCoalesce        83                 0.0
+TcpExtTCPSackShifted            9                  0.0
+TcpExtTCPSackMerged             22                 0.0
+TcpExtTCPSackShiftFallback      5                  0.0
+TcpExtTCPAutoCorking            692                0.0
+TcpExtTCPOrigDataSent           603135             0.0
+TcpExtTCPDelivered              603118             0.0
+IpExtInOctets                   930292             0.0
+IpExtOutOctets                  874175112          0.0
+IpExtInNoECTPkts                17887              0.0
+[OK]
+
+===== SAMPLE 7/15 2026-02-25 15:19:51
+===== 2026-02-25 15:19:51 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:51 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394076 5651131      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286256 4281956      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:51 | nstat | head -n 30
+#kernel
+IpInReceives                    14297              0.0
+IpInDelivers                    14297              0.0
+IpOutRequests                   10673              0.0
+IpOutTransmits                  10673              0.0
+TcpEstabResets                  1                  0.0
+TcpInSegs                       14297              0.0
+TcpOutSegs                      479522             0.0
+TcpExtDelayedACKs               1                  0.0
+TcpExtTCPHPHits                 1                  0.0
+TcpExtTCPPureAcks               11400              0.0
+TcpExtTCPHPAcks                 2765               0.0
+TcpExtTCPBacklogCoalesce        82                 0.0
+TcpExtTCPAutoCorking            558                0.0
+TcpExtTCPOrigDataSent           479608             0.0
+TcpExtTCPDelivered              479363             0.0
+IpExtInOctets                   743443             0.0
+IpExtOutOctets                  694888899          0.0
+IpExtInNoECTPkts                14297              0.0
+[OK]
+
+===== SAMPLE 8/15 2026-02-25 15:19:52
+===== 2026-02-25 15:19:52 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:52 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394076 5651131      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286256 4281956      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:52 | nstat | head -n 30
+#kernel
+[OK]
+
+===== SAMPLE 9/15 2026-02-25 15:19:53
+===== 2026-02-25 15:19:53 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:53 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394076 5651131      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286256 4281956      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:53 | nstat | head -n 30
+#kernel
+[OK]
+
+===== SAMPLE 10/15 2026-02-25 15:19:54
+===== 2026-02-25 15:19:54 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:54 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394076 5651131      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286256 4281956      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:54 | nstat | head -n 30
+#kernel
+[OK]
+
+===== SAMPLE 11/15 2026-02-25 15:19:55
+===== 2026-02-25 15:19:55 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:55 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394076 5651131      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286256 4281956      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:55 | nstat | head -n 30
+#kernel
+[OK]
+
+===== SAMPLE 12/15 2026-02-25 15:19:56
+===== 2026-02-25 15:19:56 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:56 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394136 5651132      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286298 4281957      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:56 | nstat | head -n 30
+#kernel
+[OK]
+
+===== SAMPLE 13/15 2026-02-25 15:19:57
+===== 2026-02-25 15:19:57 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:57 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394136 5651132      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286298 4281957      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:57 | nstat | head -n 30
+#kernel
+[OK]
+
+===== SAMPLE 14/15 2026-02-25 15:19:58
+===== 2026-02-25 15:19:58 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:58 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394136 5651132      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286298 4281957      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:58 | nstat | head -n 30
+#kernel
+[OK]
+
+===== SAMPLE 15/15 2026-02-25 15:19:59
+===== 2026-02-25 15:19:59 | ss -tin | grep 5201
+[NG] (exit=1)
+
+===== 2026-02-25 15:19:59 | ip -s link show ens224
+3: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:0e:44:4c brd ff:ff:ff:ff:ff:ff
+    RX:    bytes packets errors dropped  missed   mcast           
+      8363394136 5651132      0       0       0      78 
+    TX:    bytes packets errors dropped carrier collsns           
+    268395286298 4281957      0       0       0       0 
+    altname enp19s0
+[OK]
+
+===== 2026-02-25 15:19:59 | nstat | head -n 30
+#kernel
+[OK]
+
