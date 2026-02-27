@@ -1,0 +1,19 @@
+2026-02-27 04:30:41 Connecting to host 192.168.3.3, port 5201
+2026-02-27 04:30:41 [  5] local 192.168.3.2 port 34956 connected to 192.168.3.3 port 5201
+2026-02-27 04:30:42 [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-02-27 04:30:42 [  5]   0.00-1.00   sec   365 MBytes  3.06 Gbits/sec  1328   1.17 MBytes
+2026-02-27 04:30:43 [  5]   1.00-2.00   sec   345 MBytes  2.89 Gbits/sec  536    734 KBytes
+2026-02-27 04:30:44 [  5]   2.00-3.00   sec   365 MBytes  3.06 Gbits/sec  515    598 KBytes
+2026-02-27 04:30:45 [  5]   3.00-4.00   sec   345 MBytes  2.89 Gbits/sec    0    943 KBytes
+2026-02-27 04:30:46 [  5]   4.00-5.00   sec   355 MBytes  2.98 Gbits/sec  349    635 KBytes
+2026-02-27 04:30:47 [  5]   5.00-6.00   sec   368 MBytes  3.08 Gbits/sec  151    611 KBytes
+2026-02-27 04:30:48 [  5]   6.00-7.00   sec   364 MBytes  3.05 Gbits/sec  370    741 KBytes
+2026-02-27 04:30:49 [  5]   7.00-8.00   sec   361 MBytes  3.03 Gbits/sec   12    761 KBytes
+2026-02-27 04:30:50 [  5]   8.00-9.00   sec   359 MBytes  3.01 Gbits/sec  448    587 KBytes
+2026-02-27 04:30:51 [  5]   9.00-10.00  sec   384 MBytes  3.22 Gbits/sec  238    559 KBytes
+2026-02-27 04:30:51 - - - - - - - - - - - - - - - - - - - - - - - - -
+2026-02-27 04:30:51 [ ID] Interval           Transfer     Bitrate         Retr
+2026-02-27 04:30:51 [  5]   0.00-10.00  sec  3.53 GBytes  3.03 Gbits/sec  3947             sender
+2026-02-27 04:30:51 [  5]   0.00-10.00  sec  3.52 GBytes  3.03 Gbits/sec                  receiver
+2026-02-27 04:30:51 
+2026-02-27 04:30:51 iperf Done.
