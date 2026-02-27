@@ -1,0 +1,56 @@
+2026/02/27 00:21:21 [INFO    ] Start HTTP GET sampling script.
+2026/02/27 00:21:21 [INFO    ] Parameters: KBYTE=50000, INTERVAL=120, SAMPLE=50, CLIENT=1, SAMPLE_PER_CLIENT=50, START_INTERVAL=120
+2026/02/27 00:21:21 [INFO    ] GET URL: https://speed.cloudflare.com/__down?bytes=50000000
+2026/02/27 00:21:21 [INFO    ] Client 000 started. Sampling 50 times.
+2026/02/27 00:21:24 [INFO    ] client 000 on sample 1 Successfully got HTTP response.
+2026/02/27 00:23:25 [INFO    ] client 000 on sample 2 Successfully got HTTP response.
+2026/02/27 00:25:27 [INFO    ] client 000 on sample 3 Successfully got HTTP response.
+2026/02/27 00:27:30 [INFO    ] client 000 on sample 4 Successfully got HTTP response.
+2026/02/27 00:29:32 [INFO    ] client 000 on sample 5 Successfully got HTTP response.
+2026/02/27 00:31:34 [INFO    ] client 000 on sample 6 Successfully got HTTP response.
+2026/02/27 00:33:35 [INFO    ] client 000 on sample 7 Successfully got HTTP response.
+2026/02/27 00:35:37 [INFO    ] client 000 on sample 8 Successfully got HTTP response.
+2026/02/27 00:37:39 [INFO    ] client 000 on sample 9 Successfully got HTTP response.
+2026/02/27 00:39:42 [INFO    ] client 000 on sample 10 Successfully got HTTP response.
+2026/02/27 00:41:44 [INFO    ] client 000 on sample 11 Successfully got HTTP response.
+2026/02/27 00:43:46 [INFO    ] client 000 on sample 12 Successfully got HTTP response.
+2026/02/27 00:45:50 [INFO    ] client 000 on sample 13 Successfully got HTTP response.
+2026/02/27 00:47:52 [INFO    ] client 000 on sample 14 Successfully got HTTP response.
+2026/02/27 00:49:54 [INFO    ] client 000 on sample 15 Successfully got HTTP response.
+2026/02/27 00:51:56 [INFO    ] client 000 on sample 16 Successfully got HTTP response.
+2026/02/27 00:53:58 [INFO    ] client 000 on sample 17 Successfully got HTTP response.
+2026/02/27 00:56:00 [INFO    ] client 000 on sample 18 Successfully got HTTP response.
+2026/02/27 00:58:03 [INFO    ] client 000 on sample 19 Successfully got HTTP response.
+2026/02/27 01:00:04 [INFO    ] client 000 on sample 20 Successfully got HTTP response.
+2026/02/27 01:02:07 [INFO    ] client 000 on sample 21 Successfully got HTTP response.
+2026/02/27 01:04:09 [INFO    ] client 000 on sample 22 Successfully got HTTP response.
+2026/02/27 01:06:12 [INFO    ] client 000 on sample 23 Successfully got HTTP response.
+2026/02/27 01:08:14 [INFO    ] client 000 on sample 24 Successfully got HTTP response.
+2026/02/27 01:10:16 [INFO    ] client 000 on sample 25 Successfully got HTTP response.
+2026/02/27 01:12:21 [INFO    ] client 000 on sample 26 Successfully got HTTP response.
+2026/02/27 01:14:23 [INFO    ] client 000 on sample 27 Successfully got HTTP response.
+2026/02/27 01:16:25 [INFO    ] client 000 on sample 28 Successfully got HTTP response.
+2026/02/27 01:18:27 [INFO    ] client 000 on sample 29 Successfully got HTTP response.
+2026/02/27 01:20:29 [INFO    ] client 000 on sample 30 Successfully got HTTP response.
+2026/02/27 01:22:31 [INFO    ] client 000 on sample 31 Successfully got HTTP response.
+2026/02/27 01:24:34 [INFO    ] client 000 on sample 32 Successfully got HTTP response.
+2026/02/27 01:26:36 [INFO    ] client 000 on sample 33 Successfully got HTTP response.
+2026/02/27 01:28:37 [INFO    ] client 000 on sample 34 Successfully got HTTP response.
+2026/02/27 01:30:39 [INFO    ] client 000 on sample 35 Successfully got HTTP response.
+2026/02/27 01:32:41 [INFO    ] client 000 on sample 36 Successfully got HTTP response.
+2026/02/27 01:34:42 [INFO    ] client 000 on sample 37 Successfully got HTTP response.
+2026/02/27 01:36:44 [INFO    ] client 000 on sample 38 Successfully got HTTP response.
+2026/02/27 01:38:46 [INFO    ] client 000 on sample 39 Successfully got HTTP response.
+2026/02/27 01:40:47 [INFO    ] client 000 on sample 40 Successfully got HTTP response.
+2026/02/27 01:42:49 [INFO    ] client 000 on sample 41 Successfully got HTTP response.
+2026/02/27 01:44:51 [INFO    ] client 000 on sample 42 Successfully got HTTP response.
+2026/02/27 01:46:53 [INFO    ] client 000 on sample 43 Successfully got HTTP response.
+2026/02/27 01:48:55 [INFO    ] client 000 on sample 44 Successfully got HTTP response.
+2026/02/27 01:50:56 [INFO    ] client 000 on sample 45 Successfully got HTTP response.
+2026/02/27 01:53:06 [INFO    ] client 000 on sample 46 Successfully got HTTP response.
+2026/02/27 01:55:08 [INFO    ] client 000 on sample 47 Successfully got HTTP response.
+2026/02/27 01:57:10 [INFO    ] client 000 on sample 48 Successfully got HTTP response.
+2026/02/27 01:59:13 [INFO    ] client 000 on sample 49 Successfully got HTTP response.
+2026/02/27 02:01:15 [INFO    ] client 000 on sample 50 Successfully got HTTP response.
+2026/02/27 02:03:15 [INFO    ] All clients have completed sampling.
+2026/02/27 02:03:15 [INFO    ] HTTP GET sampling script finished. REF: /tmp/moti/sampling_get_http_31472/sampling_get_http_result.csv
