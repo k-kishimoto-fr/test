@@ -1,0 +1,53 @@
+2026-03-09 14:29:25Connecting to host 10.10.100.176, port 5201
+2026-03-09 14:29:25[  5] local 10.10.100.179 port 50122 connected to 10.10.100.176 port 5201
+2026-03-09 14:29:25[  7] local 10.10.100.179 port 50130 connected to 10.10.100.176 port 5201
+2026-03-09 14:29:26[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-03-09 14:29:26[  5]   0.00-1.00   sec   386 MBytes  3.24 Gbits/sec   44    648 KBytes       
+2026-03-09 14:29:26[  7]   0.00-1.00   sec   391 MBytes  3.28 Gbits/sec   10    851 KBytes       
+2026-03-09 14:29:26[SUM]   0.00-1.00   sec   777 MBytes  6.52 Gbits/sec   54             
+2026-03-09 14:29:27- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:27[  5]   1.00-2.00   sec   391 MBytes  3.28 Gbits/sec   18    609 KBytes       
+2026-03-09 14:29:27[  7]   1.00-2.00   sec   391 MBytes  3.28 Gbits/sec    0    864 KBytes       
+2026-03-09 14:29:27[SUM]   1.00-2.00   sec   782 MBytes  6.56 Gbits/sec   18             
+2026-03-09 14:29:28- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:28[  5]   2.00-3.00   sec   385 MBytes  3.23 Gbits/sec   20    561 KBytes       
+2026-03-09 14:29:28[  7]   2.00-3.00   sec   385 MBytes  3.23 Gbits/sec    0    881 KBytes       
+2026-03-09 14:29:28[SUM]   2.00-3.00   sec   770 MBytes  6.46 Gbits/sec   20             
+2026-03-09 14:29:29- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:29[  5]   3.00-4.00   sec   389 MBytes  3.26 Gbits/sec   17    788 KBytes       
+2026-03-09 14:29:29[  7]   3.00-4.00   sec   388 MBytes  3.25 Gbits/sec   17    622 KBytes       
+2026-03-09 14:29:29[SUM]   3.00-4.00   sec   776 MBytes  6.51 Gbits/sec   34             
+2026-03-09 14:29:30- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:30[  5]   4.00-5.00   sec   385 MBytes  3.23 Gbits/sec    8    659 KBytes       
+2026-03-09 14:29:30[  7]   4.00-5.00   sec   388 MBytes  3.25 Gbits/sec    0    839 KBytes       
+2026-03-09 14:29:30[SUM]   4.00-5.00   sec   772 MBytes  6.48 Gbits/sec    8             
+2026-03-09 14:29:31- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:31[  5]   5.00-6.00   sec   389 MBytes  3.26 Gbits/sec    7    629 KBytes       
+2026-03-09 14:29:31[  7]   5.00-6.00   sec   389 MBytes  3.26 Gbits/sec    0    863 KBytes       
+2026-03-09 14:29:31[SUM]   5.00-6.00   sec   778 MBytes  6.52 Gbits/sec    7             
+2026-03-09 14:29:32- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:32[  5]   6.00-7.00   sec   385 MBytes  3.23 Gbits/sec   17    600 KBytes       
+2026-03-09 14:29:32[  7]   6.00-7.00   sec   385 MBytes  3.23 Gbits/sec    0    874 KBytes       
+2026-03-09 14:29:32[SUM]   6.00-7.00   sec   770 MBytes  6.46 Gbits/sec   17             
+2026-03-09 14:29:33- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:33[  5]   7.00-8.00   sec   388 MBytes  3.25 Gbits/sec    7    549 KBytes       
+2026-03-09 14:29:33[  7]   7.00-8.00   sec   388 MBytes  3.25 Gbits/sec    0    881 KBytes       
+2026-03-09 14:29:33[SUM]   7.00-8.00   sec   775 MBytes  6.50 Gbits/sec    7             
+2026-03-09 14:29:34- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:34[  5]   8.00-9.00   sec   388 MBytes  3.25 Gbits/sec    4    761 KBytes       
+2026-03-09 14:29:34[  7]   8.00-9.00   sec   389 MBytes  3.26 Gbits/sec   20    798 KBytes       
+2026-03-09 14:29:34[SUM]   8.00-9.00   sec   776 MBytes  6.51 Gbits/sec   24             
+2026-03-09 14:29:35- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:35[  5]   9.00-10.00  sec   389 MBytes  3.26 Gbits/sec   34    740 KBytes       
+2026-03-09 14:29:35[  7]   9.00-10.00  sec   389 MBytes  3.26 Gbits/sec    0    853 KBytes       
+2026-03-09 14:29:35[SUM]   9.00-10.00  sec   778 MBytes  6.52 Gbits/sec   34             
+2026-03-09 14:29:35- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-03-09 14:29:35[ ID] Interval           Transfer     Bitrate         Retr
+2026-03-09 14:29:35[  5]   0.00-10.00  sec  3.78 GBytes  3.25 Gbits/sec  176             sender
+2026-03-09 14:29:35[  5]   0.00-10.04  sec  3.78 GBytes  3.23 Gbits/sec                  receiver
+2026-03-09 14:29:35[  7]   0.00-10.00  sec  3.79 GBytes  3.26 Gbits/sec   47             sender
+2026-03-09 14:29:35[  7]   0.00-10.04  sec  3.78 GBytes  3.24 Gbits/sec                  receiver
+2026-03-09 14:29:35[SUM]   0.00-10.00  sec  7.57 GBytes  6.51 Gbits/sec  223             sender
+2026-03-09 14:29:35[SUM]   0.00-10.04  sec  7.56 GBytes  6.47 Gbits/sec                  receiver
+2026-03-09 14:29:35
+2026-03-09 14:29:35iperf Done.
