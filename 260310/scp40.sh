@@ -13,7 +13,7 @@ mkdir -p ${MYWORK} ${DONE_DIR}
 
 # --- 1. マスター接続 ---
 echo "Launching Master connection..."
-sshpass -p "$PASS" ssh -nMf -S "${SOCKET}" -o StrictHostKeyChecking=no -o ControlPersist=10m root@${SERVER}
+sshpass -p "$PASS" ssh -nM -S "${SOCKET}" -o StrictHostKeyChecking=no -o ControlPersist=10m root@${SERVER}
 
 while [ ! -S "${SOCKET}" ]; do sleep 0.2; done
 echo "Socket is ready."
