@@ -6,35 +6,50 @@ PASS="2xV!75r6"
 typeset -r MYWORK=/tmp/${0##*/}-$$
 typeset -r SOCKET="${MYWORK}/ssh-socket"
 typeset -r ifile=testfile.dat
+# 進捗管理用のディレクトリ
+typeset -r DONE_DIR="${MYWORK}/done"
 
-# ログディレクトリ作成
-mkdir -p ${MYWORK}
+mkdir -p ${MYWORK} ${DONE_DIR}
 
-# --- 重要: 最初に「土台」となるマスター接続を作る ---
-# -M: マスターモード, -N: コマンド実行せず待機, -f: バックグラウンドへ
-# StrictHostKeyChecking=no を入れないと、初回の fingerprint 確認で40個全部止まります
-sshpass -p "$PASS" ssh -nMf -S "${SOCKET}" \
-    -o StrictHostKeyChecking=no \
-    -o ControlPersist=10m \
-    root@${SERVER}
+# --- 1. マスター接続 ---
+echo "Launching Master connection..."
+sshpass -p "$PASS" ssh -nMf -S "${SOCKET}" -o StrictHostKeyChecking=no -o ControlPersist=10m root@${SERVER}
 
-echo "Master connection established. Starting 40 parallel transfers..."
+while [ ! -S "${SOCKET}" ]; do sleep 0.2; done
+echo "Socket is ready."
 
-# --- 40同時に実行 ---
+# --- 2. 実行 ---
+echo "Starting 40 parallel transfers..."
+
 for (( i=1; i<=RUNS; i++)); do
     (
-        # ControlMaster=no (既存のソケットを使うだけ) にするのがコツ
-        # time コマンドの結果をログに残す
         { time sshpass -p "$PASS" scp -o ControlPath="${SOCKET}" \
+            -o ControlMaster=no \
             -o StrictHostKeyChecking=no \
             -c aes128-ctr ${ifile} root@${SERVER}:/dev/null ; } 2>&1 | \
             sed "s/^/[Job $i] /" >> "${MYWORK}/transfer.log"
+        
+        # 終了したらフラグ用のファイルを作成
+        touch "${DONE_DIR}/$i"
     ) &
 done
 
-# 全終了を待機
+# --- 3. 進行状況のリアルタイム表示 ---
+while true; do
+    # 完了したファイル数をカウント
+    FINISHED=$(ls -1 ${DONE_DIR} | wc -l)
+    
+    # 簡易進捗バー
+    printf "\rProgress: [%-40s] %d/%d" "$(printf '#%.0s' $(seq 1 $FINISHED))" "$FINISHED" "$RUNS"
+    
+    if [ "$FINISHED" -eq "$RUNS" ]; then
+        echo -e "\nAll jobs finished!"
+        break
+    fi
+    sleep 1
+done
+
 wait
 
-# マスター接続をクローズ
 ssh -S "${SOCKET}" -O exit root@${SERVER} 2>/dev/null
-echo "All transfers completed. Log: ${MYWORK}/transfer.log"
+echo "Cleanup completed."
