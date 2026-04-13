@@ -1,8 +1,6 @@
-# 計測対象のURLをセット
-GET_URL="https://jp-tokyo.hetrixtools.com/1000mb.bin"
-client_id="Test_Client_01"
+# Ubuntu 24.04 LTS Desktop ISO (約2.6GB)
+URL="http://ftp.jaist.ac.jp/pub/Linux/ubuntu-releases/24.04/ubuntu-24.04-desktop-amd64.iso"
 
-# 実行
-curl -o /dev/null -sS --no-buffer \
--w "$(date +'%Y-%m-%d %H:%M:%S'),${client_id},%{http_code},%{time_total},%{time_starttransfer},%{time_appconnect},%{time_connect},%{time_namelookup},%{size_download},%{speed_download},%{remote_ip}\n" \
-${GET_URL}
+curl -L -o /dev/null -sS --no-buffer \
+-w "\n[結果確認]\n取得サイズ: %{size_download} bytes\n経過時間: %{time_total} s\n平均受信速度: %{speed_download} byte/s\n" \
+$URL
