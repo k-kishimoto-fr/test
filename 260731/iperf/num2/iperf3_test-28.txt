@@ -1,0 +1,19 @@
+2026-07-31 15:56:22Connecting to host 192.168.100.140, port 5201
+2026-07-31 15:56:22[  5] local 192.168.100.139 port 44808 connected to 192.168.100.140 port 5201
+2026-07-31 15:56:23[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+2026-07-31 15:56:23[  5]   0.00-1.00   sec  1.02 GBytes  8.74 Gbits/sec   98   2.10 MBytes       
+2026-07-31 15:56:24[  5]   1.00-2.00   sec  1.03 GBytes  8.86 Gbits/sec    0   2.45 MBytes       
+2026-07-31 15:56:25[  5]   2.00-3.00   sec  1.03 GBytes  8.88 Gbits/sec  129   2.08 MBytes       
+2026-07-31 15:56:26[  5]   3.00-4.00   sec  1.03 GBytes  8.85 Gbits/sec    0   2.43 MBytes       
+2026-07-31 15:56:27[  5]   4.00-5.00   sec  1.03 GBytes  8.87 Gbits/sec   54   2.08 MBytes       
+2026-07-31 15:56:28[  5]   5.00-6.00   sec  1.04 GBytes  8.89 Gbits/sec    0   2.42 MBytes       
+2026-07-31 15:56:29[  5]   6.00-7.00   sec  1.03 GBytes  8.87 Gbits/sec   19   2.05 MBytes       
+2026-07-31 15:56:30[  5]   7.00-8.00   sec  1.02 GBytes  8.80 Gbits/sec    0   2.40 MBytes       
+2026-07-31 15:56:31[  5]   8.00-9.00   sec  1.03 GBytes  8.85 Gbits/sec   49   1.98 MBytes       
+2026-07-31 15:56:32[  5]   9.00-10.00  sec  1.03 GBytes  8.82 Gbits/sec    0   2.33 MBytes       
+2026-07-31 15:56:32- - - - - - - - - - - - - - - - - - - - - - - - -
+2026-07-31 15:56:32[ ID] Interval           Transfer     Bitrate         Retr
+2026-07-31 15:56:32[  5]   0.00-10.00  sec  10.3 GBytes  8.84 Gbits/sec  349             sender
+2026-07-31 15:56:32[  5]   0.00-10.04  sec  10.3 GBytes  8.81 Gbits/sec                  receiver
+2026-07-31 15:56:32
+2026-07-31 15:56:32iperf Done.

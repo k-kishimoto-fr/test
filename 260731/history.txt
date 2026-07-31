@@ -1,0 +1,125 @@
+    1  passwd root
+    2  nslookup
+    3  ip a
+    4  ping 192.168.200.13
+    5  ping 8.8.8.8
+    6  nslookup
+    7  traceroute 8.8.8.8
+    8  apt install -y traceroute
+    9  yum install -y traceroute
+   10  yum update
+   11  ip a
+   12  tcpdump 
+   13  ping 8.8.8.8
+   14  tcpdump -ni any icmp 
+   15  ping 133.110.254.151
+   16  ping 8.8.8.8
+   17  httping 8.8.8.8
+   18  yum install -y httping
+   19  which httping
+   20  yum info httping
+   21  yum update 
+   22  yum search httping
+   23  yum install epel-release
+   24  yum makecache
+   25  yum install httping
+   26  yum repolist
+   27  ping 8.8.8.8
+   28  cat /etc/resolv.conf 
+   29  nslookup www.google.com
+   30  cd /git/test/260717/http/
+   31  ls
+   32  ./sampling_get_http.sh -kbyte 500000 -interval 120 -sample 50 -client 1
+   33  ./sampling_get_http.sh -kbyte 50000 -interval 120 -sample 50 -client 1
+   34  ./sampling_get_http.sh -kbyte 90000 -interval 120 -sample 50 -client 1
+   35  ls
+   36  cd ..
+   37  ls
+   38  mkdir iperf3
+   39  cd ..
+   40  ls
+   41  cp -ip iperf3_test.sh 260717/iperf3/
+   42  cd 260717/iperf3/
+   43  ls
+   44  chmod 755 iperf3_test.sh 
+   45  vi iperf3_test.sh 
+   46  ls
+   47  ./iperf3_test.sh 
+   48  vi iperf3_test.sh 
+   49  ./iperf3_test.sh 
+   50  ls
+   51  rm iperf3_test-1.txt 
+   52  mkdir num1
+   53  cp -ip iperf3_test.sh num1/
+   54  cd num1/
+   55  ls
+   56  ./iperf3_test.sh 
+   57  ls
+   58  rm iperf3_test-*
+   59  rm -r iperf3_test-*
+   60  rm -rf iperf3_test-*
+   61  ./iperf3_test.sh 
+   62  ls
+   63  exit
+   64  cd /git/test/260717/vCDA/
+   65  ls
+   66  cd ..
+   67  ls
+   68  cd ..
+   69  git add 260717/
+   70  git commit -m "www"
+   71  git push
+   72  ls
+   73  cd 260717/
+   74  ls
+   75  cd vCDA/
+   76  ls
+   77  cd ..
+   78  ls
+   79  cd ..
+   80  ls
+   81  mkdir 260721
+   82  cd 260721/
+   83  ls
+   84  mkdri vCDA
+   85  mkdir vCDA
+   86  cd vCDA/
+   87  ls
+   88  history
+   89  cd ..
+   90  ls
+   91  cd ..
+   92  ls
+   93  git add 260721/
+   94  git commit -m "vCDA"
+   95  git push
+   96  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping%(date +%Y%m%d%H%M).log
+   97  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping$(date +%Y%m%d%H%M).log
+   98  ls
+   99  rm napt-ping202607211637.log 
+  100  ls
+  101  cd /tmp
+  102  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping$(date +%Y%m%d%H%M).log
+  103  mkdri /git/test/260722
+  104  mkdir /git/test/260722
+  105  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping$(date +%Y%m%d%H%M).log
+  106  ip a
+  107  ping 8.8.8.8
+  108  ip a
+  109  cd /git/test/
+  110  ls
+  111  ls -l
+  112  cd 260724/
+  113  ls -l
+  114  cd vCDA/
+  115  ls
+  116  view 2026-07-30-112620_ext-ping.log 
+  117  grep 11:50 2026-07-30-112620_ext-ping.log 
+  118  pwd
+  119  cd ./260731
+  120  cd ..
+  121  ls
+  122  cd /
+  123  cd /git/test/260731/
+  124  ls
+  125  history > history.txt
