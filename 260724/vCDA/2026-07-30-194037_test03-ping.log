@@ -1,0 +1,5 @@
+2026-07-30 19:40:37 PING 192.168.100.140 (192.168.100.140) 56(84) bytes of data.
+2026-07-30 19:40:37 64 bytes from 192.168.100.140: icmp_seq=1 ttl=64 time=0.920 ms
+2026-07-30 19:40:38 64 bytes from 192.168.100.140: icmp_seq=2 ttl=64 time=0.636 ms
+2026-07-30 19:40:39 64 bytes from 192.168.100.140: icmp_seq=3 ttl=64 time=0.638 ms
+2026-07-30 19:40:40 64 bytes from 192.168.100.140: icmp_seq=4 ttl=64 time=0.638 ms
