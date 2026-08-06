@@ -1,0 +1,301 @@
+    1  passwd root
+    2  nslookup
+    3  ip a
+    4  ping 192.168.200.13
+    5  ping 8.8.8.8
+    6  nslookup
+    7  traceroute 8.8.8.8
+    8  apt install -y traceroute
+    9  yum install -y traceroute
+   10  yum update
+   11  ip a
+   12  tcpdump 
+   13  ping 8.8.8.8
+   14  tcpdump -ni any icmp 
+   15  ping 133.110.254.151
+   16  ping 8.8.8.8
+   17  httping 8.8.8.8
+   18  yum install -y httping
+   19  which httping
+   20  yum info httping
+   21  yum update 
+   22  yum search httping
+   23  yum install epel-release
+   24  yum makecache
+   25  yum install httping
+   26  yum repolist
+   27  ping 8.8.8.8
+   28  cat /etc/resolv.conf 
+   29  nslookup www.google.com
+   30  cd /git/test/260717/http/
+   31  ls
+   32  ./sampling_get_http.sh -kbyte 500000 -interval 120 -sample 50 -client 1
+   33  ./sampling_get_http.sh -kbyte 50000 -interval 120 -sample 50 -client 1
+   34  ./sampling_get_http.sh -kbyte 90000 -interval 120 -sample 50 -client 1
+   35  ls
+   36  cd ..
+   37  ls
+   38  mkdir iperf3
+   39  cd ..
+   40  ls
+   41  cp -ip iperf3_test.sh 260717/iperf3/
+   42  cd 260717/iperf3/
+   43  ls
+   44  chmod 755 iperf3_test.sh 
+   45  vi iperf3_test.sh 
+   46  ls
+   47  ./iperf3_test.sh 
+   48  vi iperf3_test.sh 
+   49  ./iperf3_test.sh 
+   50  ls
+   51  rm iperf3_test-1.txt 
+   52  mkdir num1
+   53  cp -ip iperf3_test.sh num1/
+   54  cd num1/
+   55  ls
+   56  ./iperf3_test.sh 
+   57  ls
+   58  rm iperf3_test-*
+   59  rm -r iperf3_test-*
+   60  rm -rf iperf3_test-*
+   61  ./iperf3_test.sh 
+   62  ls
+   63  exit
+   64  cd /git/test/260717/vCDA/
+   65  ls
+   66  cd ..
+   67  ls
+   68  cd ..
+   69  git add 260717/
+   70  git commit -m "www"
+   71  git push
+   72  ls
+   73  cd 260717/
+   74  ls
+   75  cd vCDA/
+   76  ls
+   77  cd ..
+   78  ls
+   79  cd ..
+   80  ls
+   81  mkdir 260721
+   82  cd 260721/
+   83  ls
+   84  mkdri vCDA
+   85  mkdir vCDA
+   86  cd vCDA/
+   87  ls
+   88  history
+   89  cd ..
+   90  ls
+   91  cd ..
+   92  ls
+   93  git add 260721/
+   94  git commit -m "vCDA"
+   95  git push
+   96  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping%(date +%Y%m%d%H%M).log
+   97  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping$(date +%Y%m%d%H%M).log
+   98  ls
+   99  rm napt-ping202607211637.log 
+  100  ls
+  101  cd /tmp
+  102  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping$(date +%Y%m%d%H%M).log
+  103  mkdri /git/test/260722
+  104  mkdir /git/test/260722
+  105  ping -W 1 8.8.8.8 | xargs -I_ date +"%Y-%m-%dT/%H:%M:%S - _" | tee napt-ping$(date +%Y%m%d%H%M).log
+  106  ip a
+  107  ping 8.8.8.8
+  108  ip a
+  109  cd /git/test/
+  110  ls
+  111  ls -l
+  112  cd 260724/
+  113  ls -l
+  114  cd vCDA/
+  115  ls
+  116  view 2026-07-30-112620_ext-ping.log 
+  117  grep 11:50 2026-07-30-112620_ext-ping.log 
+  118  pwd
+  119  cd ./260731
+  120  cd ..
+  121  ls
+  122  cd /
+  123  cd /git/test/260731/
+  124  ls
+  125  history > history.txt
+  126  view history.txt 
+  127  ls
+  128  cd ..
+  129  ls
+  130  cd 260717
+  131  ls
+  132  cd http/
+  133  ls
+  134  cp -ip sampling_get_http.sh /git/test/260731/
+  135  cd  /git/test/260731/
+  136  ls
+  137  cp -ip sampling_get_http.sh 50MB/
+  138  ls
+  139  cp -ip sampling_get_http.sh 90MB/
+  140  cd 50MB
+  141  ls
+  142  ./sampling_get_http.sh -kbyte 50000 -interval 120 -sample 50 -client 1
+  143  cd ..
+  144  ls
+  145  cd ..
+  146  ls
+  147  cd 260717
+  148  ls
+  149  cd iperf3/
+  150  ls
+  151  cd num1
+  152  ls
+  153  cp -ip iperf3_test.sh  /git/test/260731/iperf/
+  154  cd /git/test/260731/
+  155  ls
+  156  cd iperf/
+  157  ls
+  158  mkdir num1
+  159  cp -ip iperf3_test.sh num1/
+  160  cd num1/
+  161  ls
+  162  ./iperf3_test.sh 
+  163  cd ..
+  164  ls
+  165  mkdir num2
+  166  cp -ip iperf3_test.sh num2/
+  167  cd num2
+  168  ls
+  169  ./iperf3_test.sh 
+  170  ls
+  171  rm iperf3_test-1.txt 
+  172  ls
+  173  ./iperf3_test.sh 
+  174  cd ..
+  175  mkdir num3
+  176  ls
+  177  cp -ip iperf3_test.sh num3/
+  178  cd num3/
+  179  ls
+  180  ./iperf3_test.sh 
+  181  cd ..
+  182  ls
+  183  cd ..
+  184  ls
+  185  cd ..
+  186  ls
+  187  git add 260731/
+  188  git commit -m "S12STG After 4.2.3.3 Upgrade Performance check"
+  189  git push
+  190  ls
+  191  mkdir 260803
+  192  cd 260803/
+  193  mkdir http
+  194  mkdir cpu
+  195  cd http/
+  196  mkdir 50MB
+  197  mkdir 90MB
+  198  cd ..
+  199  cd 260731
+  200  cd ..
+  201  cd 260731/
+  202  ls
+  203  cp -ip sampling_get_http.sh /git/test/260803/http/
+  204  cd /git/test/260803/http/
+  205  ls
+  206  cp -ip sampling_get_http.sh 50MB/
+  207  cp -ip sampling_get_http.sh 90MB/
+  208  cd 50MB/
+  209  ./sampling_get_http.sh -kbyte 50000 -interval 120 -sample 50 -client 1
+  210  cd ..
+  211  ls
+  212  cd 90MB/
+  213  ls
+  214  ./sampling_get_http.sh -kbyte 90000 -interval 120 -sample 50 -client 1
+  215  ls
+  216  cd ..
+  217  ls
+  218  cd 260731/
+  219  ls
+  220  cd ..
+  221  cd 260724/
+  222  ls
+  223  cd vCDA/
+  224  ls
+  225  mkdir /git/test/260729-30
+  226  cp -ip 2026-07-29-1939* /git/test/260729-30/
+  227  cp -ip 2026-07-30-1* /git/test/260729-30/
+  228  cd ..
+  229  ls
+  230  rm 2026-07-17-14*.log
+  231  ls
+  232  git add 260*
+  233  git commit -m "Upgrade / Performance evi"
+  234  git push
+  235  ping 192.168.200.11
+  236  ip route
+  237  ping 133.110.254.151
+  238  tcpdump -ni any icmp
+  239  cat /etc/resolv.conf 
+  240  nslookup www.google.com -c 1
+  241  ping www.google.com -c 1
+  242  i@ a
+  243  ip a
+  244  cat /etc/resolv.conf 
+  245  ls
+  246  git pull
+  247  git add 260805/
+  248  git commim -m "a"
+  249  git commit -m "a"
+  250  git push
+  251  mkdir 260806
+  252  git add 260806/
+  253  git commit -m "b"
+  254  cd 2608006
+  255  cd 260806
+  256  vi scp-10g.sh
+  257  ls
+  258  cd ..
+  259  git add 260806/
+  260  git commit -m "a"
+  261  git push
+  262  git pull
+  263  cd 260806
+  264  ls
+  265  chmod 755 scp-10g.sh 
+  266  ls
+  267  cat scp-10g.sh 
+  268  ./scp-10g.sh 
+  269  curl -0
+  270  curl -O
+  271  git pull
+  272  ls
+  273  chmod 755 edgecpu-test.sh 
+  274  ls
+  275  ./edgecpu-test.sh -parallel 16 -duration 600
+  276  ./edgecpu-test.sh -parallel 32 -duration 600
+  277  git pull
+  278  git restore 260806/edgecpu-test.sh
+  279  git reset --hard HEAD
+  280  git pull
+  281  ls
+  282  chmod 755 edgecpu-test.sh 
+  283  ./edgecpu-test.sh -parallel 32 -duration 600
+  284  cd ../260804/
+  285  ls
+  286  cd ../260803
+  287  ls
+  288  cd http/
+  289  ls
+  290  ./sampling_get_http.sh 
+  291  ls
+  292  cp -ip sampling_get_http.sh /git/test/260806/
+  293  cd /git/test/260826
+  294  cd /git/test/260806/
+  295  ls
+  296  git pull
+  297  git add 260806/
+  298  git add /git/test/260806/
+  299  git commit -m "aa"
+  300  git push
+  301  history > history.log
