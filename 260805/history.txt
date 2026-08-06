@@ -1,0 +1,268 @@
+    1  ls
+    2  cd /tmp
+    3  cd 
+    4  cd /tmp
+    5  ls
+    6  cd sampling_get_http_175225/
+    7  ls
+    8  mkdir /git/test/260717/http/50MB
+    9  mkdir /git/test/260717/http/90MB
+   10  cp -ip * /git/test/260717/http/50MB/
+   11  cd ..
+   12  cd sampling_get_http_192890/
+   13  ls
+   14  cp -ip * /git/test/260717/http/90MB/
+   15  cd /git/test/
+   16  ls
+   17  git add 260717
+   18  git commit -m "http test nsx4-test01"
+   19  git config --global user.email "kazuya.kishimoto@futurerays.biz"
+   20  git config --global user.name "k-kishimoro-fr"
+   21  git commit -m "http test nsx4-test01"
+   22  git push origin master
+   23  git pull
+   24  git push
+   25  git config --global credential.helper store
+   26  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" httpis://www.google.com)"; sleep 1; done | tee -a 'date +"%Y-%m-%d-%H%M%S"'_S12ext-http.log
+   27  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a 'date +"%Y-%m-%d-%H%M%S"'_S12ext-http.log
+   28  ls
+   29  rm 'date +"%Y-%m-%d-%H%M%S"_S12ext-http.log' 
+   30  ls
+   31  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a 'date +"%Y-%m-%d-%H%M%S"'_S12ext-http.log
+   32  ;s
+   33  ls
+   34  rm 'date +"%Y-%m-%d-%H%M%S"_S12ext-http.log' 
+   35  ls
+   36  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a date +"%Y-%m-%d-%H%M%S"_S12ext-http.log
+   37  ls
+   38  rm date
+   39  rm +%Y-%m-%d-%H%M%S_S12ext-http.log 
+   40  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a date+"%Y-%m-%d-%H%M%S"_S12ext-http.log
+   41  ls
+   42  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a' date+"%Y-%m-%d-%H%M%S"'_S12ext-http.log
+   43  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a 'date+"%Y-%m-%d-%H%M%S"'_S12ext-http.log
+   44  ls
+   45  rm 'date+*
+   46  rm 'date+*'
+   47  rm 'date+"%Y-%m-%d-%H%M%S"_S12ext-http.log' 
+   48  rm date+%Y-%m-%d-%H%M%S_S12ext-http.log 
+   49  ls
+   50  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a 'date +"%Y-%m-%d-%H%M%S"'_S12ext-http.log
+   51  ls
+   52  rm 'date +"%Y-%m-%d-%H%M%S"_S12ext-http.log' 
+   53  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_S12ext-http.log
+   54  ls
+   55  rm 2026-07-17-140128_S12ext-http.log 
+   56  ls
+   57  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_S12ext-http.log
+   58  ls
+   59  cp -ip 2026-07-17-14* /git/test/260717/vCDA/
+   60  yum install iperf3
+   61  iperf3 -c 192.168.100.140 -t 10 --timestamps="%Y-%m-%d %H:%M:%S"
+   62  netstat -n | grep 5201
+   63  telnet 192.168.100.140 5201
+   64  iperf3 -c 192.168.100.140 -t 10 --timestamps="%Y-%m-%d %H:%M:%S"
+   65  ls
+   66  git add 260717/
+   67  git commit -m "a"
+   68  git push
+   69  history
+   70  cd 260717/vCDA/
+   71  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_S12ext-http.log
+   72  cd /git/test/260721/vCDA/
+   73  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_S12ext-http.log
+   74  cd /tmp
+   75  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_S12ext-http.log
+   76  ls
+   77  dd if=/dev/zero of=testfile.bin bs=1M count=500
+   78  curl -p /dev/null -X POST -T testfile.bin -w "\nUpload-Speed: %(speed_upload} byte/s\nHTTP-code: %{http_code}\n" https://httpbin.org/post
+   79  ls -lh testfile.bin 
+   80  curl -o /dev/null -X POST -T testfile.bin -w "\nUpload-Speed: %(speed_upload} byte/s\nHTTP-code: %{http_code}\n" https://httpbin.org/post
+   81  curl -o /dev/null -X POST -T testfile.bin -w "\nUpload-Speed: %{speed_upload} byte/s\nHTTP-code: %{http_code}\n" https://httpbin.org/post
+   82  curl -L -o /dev/null -w "\nDownload-Speed: %{speed_download} byte/s\nHTTP-Code: %{http_code}\n" https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+   83  ls
+   84  history
+   85  cd /git/test/260723/vCDA/
+   86  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_ext-curl.log
+   87  cd /git/test/260724/vCDA/
+   88  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_ext-curl.log
+   89  ls
+   90  ls -l
+   91  ls -lh
+   92  lsblk
+   93  df -h
+   94  ping 172.18.159.17
+   95  ping 172.18.159.26
+   96  ping 172.18.159.10
+   97  traceroute 8.8.8.8
+   98  mtr www.google.com
+   99  tracepath www.google.com
+  100  mtr www.google.com
+  101  ping 192.168.200.11
+  102  cd /tmp
+  103  ls
+  104  dd if=/dev/zero of=/tmp/test_10g.dat bs=1M count=10240
+  105  ls
+  106  scp -l 50000 /tmp/test_10g.dat root@192.168.200.11:/tmp/
+  107  ssh 192.168.200.11
+  108  ssh -o PreferredAuthentications=Password root@192.168.200.11
+  109  ssh -o PreferredAuthentications=password root@192.168.200.11
+  110  ssh -v root@192.168.200.11
+  111  ssh 192.168.200.11
+  112  scp -l 50000 /tmp/test_10g.dat root@192.168.200.11:/tmp/
+  113  dd if=/dev/zero of=/tmp/test_2500m.dat bs=1M count=2500
+  114  scp -l 50000 /tmp/test_2500m.dat root@192.168.200.11:/tmp/
+  115  date
+  116  scp -l 50000 /tmp/test_2500m.dat root@192.168.200.11:/tmp/
+  117  dd if=/dev/zero of=/tmp/test_2500m.dat bs=1M count=4500
+  118  dd if=/dev/zero of=/tmp/test_4500m.dat bs=1M count=4500
+  119  scp -l 50000 /tmp/test_4500.dat root@192.168.200.11:/tmp/
+  120  scp -l 50000 /tmp/test_4500m.dat root@192.168.200.11:/tmp/
+  121  date
+  122  while true; do date +"%Y-%m-%d %H:%M:%S $(curl -o /dev/null -s --connect-timeout 1 --max-time 1 -w "%{http_code}:%{time_total}:%{remote_ip}:%{size_download}\n" https://www.google.com)"; sleep 1; done | tee -a "$(date +%Y-%m-%d-%H%M%S)"_ext-curl.log
+  123  ls
+  124  cp -ip 2026-07-29-193925_ext-curl.log /git/test/260724/vCDA/
+  125  cp -ip 2026-07-30-112629_ext-curl.log /git/test/260724/vCDA/
+  126  cd /git/test/260724/vCDA/
+  127  ls
+  128  history
+  129  cd /git/test/260731/iperf/num1/
+  130  ls
+  131  cd /git/test/260717/
+  132  ls
+  133  cd iperf3/
+  134  ls
+  135  cd num1/
+  136  ls
+  137  cat iperf3_test-1
+  138  cat iperf3_test-1.txt 
+  139  pwd
+  140  cd /git/test/260731/iperf/num3/
+  141  ls
+  142  ip a
+  143  ethtool -x ens192
+  144  ethtool -l ens192
+  145  ping 133.110.254.151
+  146  history
+  147  cd /tmp
+  148  ls
+  149  scp -l 50000 /tmp/test_4500m.dat root@192.168.200.11:/tmp/
+  150  ls
+  151  vi scp-test.sh
+  152  ls
+  153  vi scp-test.sh
+  154  chmod 755 scp-test.sh 
+  155  ls
+  156  ./scp-test.sh 
+  157  vi scp-test.sh 
+  158  ./scp-test.sh 
+  159  vi scp-test.sh 
+  160  which sshpass
+  161  apt install sshpass
+  162  yum install sshpass
+  163  vi scp-test.sh 
+  164  ./scp-test.sh 
+  165  vi scp-test.sh 
+  166  ./scp-test.sh 
+  167  vi scp-test.sh 
+  168  ./scp-test.sh 
+  169  vi scp-test.sh 
+  170  ls
+  171  ./scp-test.sh 
+  172  vi scp-test.sh 
+  173  ./scp-test.sh 
+  174  vi scp-test.sh 
+  175  ./scp-test.sh 
+  176  ls
+  177  dd if=/dev/zero of=test_1000m.dat bs=1M count=1000
+  178  vi scp-test.sh 
+  179  ./scp-test.sh 
+  180  vi scp-test.sh 
+  181  ./scp-test.sh 
+  182  vi scp-test.sh 
+  183  ./scp-test.sh 
+  184  vi scp-test.sh 
+  185  cat -ver scp-test.sh 
+  186  cat -vet scp-test.sh 
+  187  sed -n '15,22p' scp-test.sh | od -c
+  188  vi scp-test.sh 
+  189  ./scp-test.sh 
+  190  vi scp-test.sh 
+  191  ./scp-test.sh 
+  192  ls
+  193  history 
+  194  cd /git/test/
+  195  ls
+  196  mkdir 260804
+  197  cd 260803/
+  198  ls
+  199  cd ..
+  200  cd 260731/
+  201  ls
+  202  cd iperf/
+  203  ls
+  204  cp -ip iperf3_test.sh /git/test/260804/
+  205  cd /git/test/260804/
+  206  ls
+  207  mkdir iperf3
+  208  mv iperf3_test.sh iperf3/
+  209  cd iperf3/
+  210  ls
+  211  mkdir num1
+  212  cp -ip iperf3_test.sh num1/
+  213  cd num1/
+  214  ls
+  215  ./iperf3_test.sh 
+  216  cd ..
+  217  owd
+  218  pwd
+  219  cd ..
+  220  ls
+  221  cd ..
+  222  ls
+  223  git add 260804/
+  224  git commit -m "iperf3"
+  225  git push
+  226  ls
+  227  cd 260804/
+  228  ls
+  229  cd iperf3/
+  230  ls
+  231  vi iperf3_test.sh 
+  232  cd ..
+  233  ls
+  234  cd ..
+  235  ls
+  236  mkdir 260805
+  237  cd 260805/
+  238  mkdir iper3
+  239  cd ..
+  240  cd 260803/
+  241  ls
+  242  cd ..
+  243  ls
+  244  cd 260731/
+  245  ls
+  246  cd iperf/
+  247  ls
+  248  cp -ip iperf3_test.sh /git/test/260805/iper3/
+  249  cd /git/test/260805/iper3/
+  250  ls
+  251  ./iperf3_test.sh 
+  252  ls
+  253  vi iperf3_test.sh 
+  254  ls
+  255  scp iperf3_test.sh root@192.168.100.41:/tmp/iperf_test.sh
+  256  scp iperf3_test.sh root@192.168.100.42:/tmp/iperf_test.sh
+  257  ls
+  258  rm iperf3_test-*
+  259  ./iperf3_test.sh 
+  260  ls
+  261  cat iperf3_test-6.txt 
+  262  ls
+  263  history
+  264  ls
+  265  pwd
+  266  cd ..
+  267  ls
+  268  history > history.txt
