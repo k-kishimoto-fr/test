@@ -51,23 +51,27 @@ worker() {
 
     while [ "$(date +%s)" -lt "${END_TIME}" ]
     do
-        START=$(date +%s)
 
-        curl \
+        RESULT=$(curl \
             -L \
             -s \
             -o /dev/null \
-            "${URL}"
+            -w "%{http_code},%{size_download},%{time_total},%{speed_download},%{remote_ip}" \
+            "${URL}")
 
         RC=$?
 
-        STOP=$(date +%s)
-        ELAPSED=$((STOP - START))
+        HTTP_CODE=$(echo "${RESULT}" | cut -d',' -f1)
+        SIZE=$(echo "${RESULT}"      | cut -d',' -f2)
+        TIME_TOTAL=$(echo "${RESULT}"| cut -d',' -f3)
+        SPEED=$(echo "${RESULT}"     | cut -d',' -f4)
+        REMOTE_IP=$(echo "${RESULT}" | cut -d',' -f5)
 
         count=$((count + 1))
 
-        echo "$(date '+%F %T') worker=${id} count=${count} rc=${RC} sec=${ELAPSED}" \
+        echo "$(date '+%F %T'),worker=${id},count=${count},rc=${RC},http=${HTTP_CODE},bytes=${SIZE},time=${TIME_TOTAL},speed=${SPEED},remote_ip=${REMOTE_IP}" \
             >> "${WORKDIR}/worker_${id}.log"
+
     done
 }
 
